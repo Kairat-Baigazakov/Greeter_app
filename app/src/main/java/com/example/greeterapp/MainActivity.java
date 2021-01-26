@@ -16,16 +16,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    String name = "Unknow";
+    static String name = "Unknow";
     private static final String greet = "Hello ";
     private static final String end = "!";
     private static final String NAME_KEY = "Unknow";
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-        TextView nameView = findViewById(R.id.text);
         outState.putString(NAME_KEY, name);
-
         super.onSaveInstanceState(outState);
     }
 
